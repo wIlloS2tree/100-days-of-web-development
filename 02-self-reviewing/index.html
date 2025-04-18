@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Unlimited access to everything</title>
+  </head>
+  <body>
+    <header>
+      <a href="https://medium.com/">Medium</a>
+    </header>
+
+    <main>
+      <!-- ✅ 카드 토글용 input은 카드 위에! -->
+      <input type="radio" id="monthly" name="plan" hidden />
+      <input type="radio" id="annually" name="plan" hidden checked />
+
+      <!-- 가격 헤더 섹션  -->
+      <section id="pricing-header">
+        <h1>Support great writing and access all stories on Medium.</h1>
+        <ul class="plan-toggle">
+          <li>
+            <!-- ✅ 스타일 토글용 -->
+            <label for="monthly" class="left-option"> Pay monthly </label>
+          </li>
+          <li>
+            <label for="annually" class="right-option">
+              Pay annually <span>Save up to $30</span>
+            </label>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 카드 전체 묶음  -->
+      <div class="pricing-card-wrapper">
+        <!-- ////////// 🅾️ 연간 카드 2개 (기본 보임) ////////// -->
+        <!-- ////////// ❎ 월간 카드 2개 (기본 숨김) ////////// -->
+
+        <!-- ✅ 월간 Member 가격 카드 섹션 -->
+        <section class="pricing-card monthly-member-card">
+          <div class="card-container">
+            <!-- 프로필 이미지 + 배지 아이콘  -->
+            <div class="profile-wrapper">
+              <img
+                src="/02-self-reviewing/SpiderMan into the Spider-Universe.JPG"
+                alt="profile picture"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="badge-icon"
+                width="100%"
+                height="100%"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <p class="subscription-type">Member</p>
+            <p class="price">$5 USD/month</p>
+            <p class="price-info">
+              Access member-only stories and enjoy an enhanced reading and
+              writing experience. Cancel anytime.
+            </p>
+          </div>
+          <!-- 선택 버튼 -->
+          <div class="button-container">
+            <a href="" class="button">Select</a>
+          </div>
+
+          <hr />
+          <!-- -------------------------------------- -->
+
+          <!-- 하위 상세정보, 그리고 여기 위로 구분선 들어가야함 -->
+          <div class="sub-details">
+            <!-- 하위 상세정보라는 전체적인 틀 -->
+            <div class="sub-feature">
+              <!-- 하위 상세정보의 각 항목들 -->
+              <div class="svg-icon">
+                <!-- 각 항목의 아이콘 -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <!-- 하위 상세정보 각 항목들의 텍스트 -->
+              <p class="sub-feature-text">Read member-only stories</p>
+            </div>
+          </div>
+
+          <!-- Support writers you read most -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Support writers you read most</p>
+            </div>
+          </div>
+
+          <!-- Earn money for your writing -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Earn money for your writing</p>
+            </div>
+          </div>
+
+          <!-- Listen to audio narrations -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Listen to audio narrations</p>
+            </div>
+          </div>
+
+          <!-- Read offline with the Medium app -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Read offline with the Medium app</p>
+            </div>
+          </div>
+
+          <!-- Access our Mastodon community -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Access our Mastodon community</p>
+            </div>
+          </div>
+
+          <!-- Connect your custom domain -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Connect your custom domain</p>
+            </div>
+          </div>
+
+          <!-- Create your own publications -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Create your own publications</p>
+            </div>
+          </div>
+        </section>
+        <!-- ✅ 월간 Member 카드 섹션 끝 -->
+
+        <!-- ✅ 월간 Friend 카드 섹션 -->
+        <section class="pricing-card monthly-friend-card">
+          <div class="card-container">
+            <div class="profile-wrapper">
+              <img
+                src="/02-self-reviewing/SpiderMan into the Spider-Universe.JPG"
+                alt="profile picture"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="badge-icon"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+                />
+              </svg>
+            </div>
+            <p class="subscription-type">Friend</p>
+            <p class="price">$15 USD/month</p>
+            <p class="price-info">
+              Contribute more to writers and strengthen your support for the
+              Medium community. Cancel anytime.
+            </p>
+          </div>
+          <!-- 선택 버튼 -->
+          <div class="button-container">
+            <a href="" class="button">Select</a>
+          </div>
+
+          <hr />
+          <!-- -------------------------------------- -->
+
+          <!-- 하위 상세정보, 그리고 여기 위로 구분선 들어가야함 -->
+          <div class="sub-details">
+            <!-- 하위 상세정보라는 전체적인 틀 -->
+            <div class="sub-feature">
+              <!-- 하위 상세정보의 각 항목들 -->
+              <div class="svg-icon">
+                <!-- 각 항목의 아이콘 -->
+
+                <svg
+                  class="svg-icon-all"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <!-- 하위 상세정보 각 항목들의 텍스트 -->
+              <p class="sub-feature-text">All Medium member benefits</p>
+            </div>
+          </div>
+
+          <div class="divider-with-text">
+            <span>PLUS</span>
+          </div>
+
+          <!-- Support writers you read most -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">
+                <span>Give 4x more to the writers you read</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Earn money for your writing -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">
+                Share member-only stories with anyone and drive more earnings
+                for writers
+              </p>
+            </div>
+          </div>
+
+          <!-- Listen to audio narrations -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Customize app icon</p>
+            </div>
+          </div>
+        </section>
+        <!-- ✅ 월간 Friend 카드 섹션 끝 -->
+        <!-- ////////// 여기서부터 월간!!! 카드 섹션 끝!!!! ////////// -->
+
+        <!-- ✅ 연간 Member 가격 카드 섹션 -->
+        <section class="pricing-card annually-member-card">
+          <div class="card-container">
+            <!-- 프로필 이미지 + 배지 아이콘  -->
+            <div class="profile-wrapper">
+              <img
+                src="/02-self-reviewing/SpiderMan into the Spider-Universe.JPG"
+                alt="profile picture"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="badge-icon"
+                width="100%"
+                height="100%"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+
+            <p class="subscription-type">Member</p>
+            <p class="price">
+              <span class="before-sale">$60</span> $50 USD/year
+            </p>
+            <p class="price-info">
+              Access member-only stories and enjoy an enhanced reading and
+              writing experience. Cancel anytime.
+            </p>
+          </div>
+          <!-- 선택 버튼 -->
+          <div class="button-container">
+            <a href="" class="button">Select</a>
+          </div>
+
+          <hr />
+          <!-- -------------------------------------- -->
+
+          <!-- 하위 상세정보, 그리고 여기 위로 구분선 들어가야함 -->
+          <div class="sub-details">
+            <!-- 하위 상세정보라는 전체적인 틀 -->
+            <div class="sub-feature">
+              <!-- 하위 상세정보의 각 항목들 -->
+              <div class="svg-icon">
+                <!-- 각 항목의 아이콘 -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <!-- 하위 상세정보 각 항목들의 텍스트 -->
+              <p class="sub-feature-text">Read member-only stories</p>
+            </div>
+          </div>
+
+          <!-- Support writers you read most -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Support writers you read most</p>
+            </div>
+          </div>
+
+          <!-- Earn money for your writing -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Earn money for your writing</p>
+            </div>
+          </div>
+
+          <!-- Listen to audio narrations -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Listen to audio narrations</p>
+            </div>
+          </div>
+
+          <!-- Read offline with the Medium app -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Read offline with the Medium app</p>
+            </div>
+          </div>
+
+          <!-- Access our Mastodon community -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Access our Mastodon community</p>
+            </div>
+          </div>
+
+          <!-- Connect your custom domain -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Connect your custom domain</p>
+            </div>
+          </div>
+
+          <!-- Create your own publications -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Create your own publications</p>
+            </div>
+          </div>
+        </section>
+        <!-- ✅ 연간 Member 카드 섹션 끝 -->
+
+        <!-- ✅ 연간 Friend 카드 섹션 -->
+        <section class="pricing-card annually-friend-card">
+          <div class="card-container">
+            <div class="profile-wrapper">
+              <img
+                src="/02-self-reviewing/SpiderMan into the Spider-Universe.JPG"
+                alt="profile picture"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="badge-icon"
+                width="40"
+                height="40"
+              >
+                <path
+                  d="m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z"
+                />
+              </svg>
+            </div>
+            <p class="subscription-type">Friend</p>
+            <p class="price">
+              <span class="before-sale">$180</span> $150 USD/year
+            </p>
+            <p class="price-info">
+              Contribute more to writers and strengthen your support for the
+              Medium community. Cancel anytime.
+            </p>
+          </div>
+          <!-- 선택 버튼 -->
+          <div class="button-container">
+            <a href="" class="button">Select</a>
+          </div>
+
+          <hr />
+          <!-- -------------------------------------- -->
+
+          <!-- 하위 상세정보, 그리고 여기 위로 구분선 들어가야함 -->
+          <div class="sub-details">
+            <!-- 하위 상세정보라는 전체적인 틀 -->
+            <div class="sub-feature">
+              <!-- 하위 상세정보의 각 항목들 -->
+              <div class="svg-icon">
+                <!-- 각 항목의 아이콘 -->
+
+                <svg
+                  class="svg-icon-all"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <!-- 하위 상세정보 각 항목들의 텍스트 -->
+              <p class="sub-feature-text">All Medium member benefits</p>
+            </div>
+          </div>
+
+          <div class="divider-with-text">
+            <span>PLUS</span>
+          </div>
+
+          <!-- Support writers you read most -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">
+                <span>Give 4x more to the writers you read</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Earn money for your writing -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">
+                Share member-only stories with anyone and drive more earnings
+                for writers
+              </p>
+            </div>
+          </div>
+
+          <!-- Listen to audio narrations -->
+          <div class="sub-details">
+            <div class="sub-feature">
+              <div class="svg-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                  width="17"
+                  height="17"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m4.5 12.75 6 6 9-13.5"
+                  />
+                </svg>
+              </div>
+              <p class="sub-feature-text">Customize app icon</p>
+            </div>
+          </div>
+        </section>
+        <!-- ✅ 연간 Friend 카드 섹션 끝 -->
+      </div>
+      <!-- pricing-card-wrapper 끝 -->
+    </main>
+  </body>
+</html>
