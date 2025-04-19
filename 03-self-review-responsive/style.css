@@ -14,19 +14,20 @@ html {
   --size-1: 14px;
   --size-2: 22px;
   --size-3: 25px;
-  --size-4: 30px;
+  --size-4: 28px;
   --size-5: 35px;
 }
 
 body {
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 header {
   text-align: center;
   padding: 0.5rem 0;
-  margin: 0;
+  margin-bottom: 88px;
   border-bottom: 1px solid var(--color-grey-100);
 }
 
@@ -46,11 +47,15 @@ header a {
 main {
   text-align: center;
   margin: 0 auto;
-  width: 34rem;
+  padding-bottom: 40px;
+  max-width: 680px;
+  width: 100%;
 }
 
-#pricing-header {
-  margin-top: 5rem;
+.pricing-h1-wrapper {
+  margin: 0 80px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 
 #pricing-header h1 {
@@ -59,6 +64,8 @@ main {
   font-size: var(--size-4);
   letter-spacing: -0.5px;
   line-height: 1.1;
+  margin: 0;
+  display: inline-block;
 }
 
 .plan-toggle {
@@ -66,8 +73,8 @@ main {
   box-shadow: inset 0 0 0 1px #e0e0e0;
   border-radius: 5px;
   padding: 0;
-  margin: 3rem auto;
-  width: fit-content; /* 내용 너비만큼만 줄이기 */
+  margin: 0 auto 3rem auto;
+  width: 280px;              /* ✅ 부모(main)의 너비만큼 늘어나게 */
   overflow: hidden;
 }
 
@@ -75,6 +82,7 @@ main {
   list-style: none;
   position: relative;
   display: flex;
+  flex: 1;               /* ✅ li가 동일한 비율로 나뉘도록 */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -83,12 +91,15 @@ main {
 .plan-toggle label {
   display: flex;
   flex-direction: column;
+  flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
   cursor: pointer;
-  color: black;
+  color: var(--color-grey-400);
   border: 1px solid transparent;
+  width: 100%;              /* ✅ li 안에서 label이 가득 채우게 */
   height: 100%;
 }
 
@@ -121,15 +132,18 @@ input[type="radio"]:checked + label {
 
 .pricing-card-wrapper {
   display: flex;
-  justify-content: center; /* 가운데 정렬 (선택) */
-  gap: 2rem; /* 카드 사이 간격 */
+  justify-content: space-between;
+  gap: 24px; /* 카드 사이 간격 */
 }
 
 .pricing-card {
-  width: 17rem;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
   border: 1px solid var(--color-grey-100);
   border-radius: 5px;
   padding: 2rem;
+  
 }
 
 #monthly:checked ~ #pricing-header label[for="monthly"],
@@ -199,7 +213,9 @@ input[type="radio"]:checked + label {
   align-items: center;          /* 수직 중앙 */
   justify-content: center;      /* 수평 중앙 */
   box-sizing: border-box;
+  
 }
+
 
 .subscription-type {
   font-size: var(--size-2);
@@ -224,15 +240,19 @@ input[type="radio"]:checked + label {
 }
 
 .button-contatiner {
-  /* margin: 30rem; */
+  display: flex;
+  justify-content: center;
 }
 
 .button {
+  width: 262px;
+  display: block;
   background-color: var(--color-primary-300);
   text-decoration: none;
-  padding: 10px 120px;
+  padding: 10px 0;
   color: white;
   border-radius: 20px;
+  text-align: center;
 }
 
 .button:hover {
@@ -256,7 +276,7 @@ input[type="radio"]:checked + label {
   color: var(--color-primary-300);
   flex-shrink: 0; /* 줄어들지 않도록 */
   overflow: visible; /* 사파리 렌더링 트릭 */
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .svg-icon-all {
@@ -311,10 +331,27 @@ hr {
   margin-left: 1rem;
 }
 
+.toggle-text {
+  display: none;
+  font-size: var(--size-1);
+  color: var(--color-grey-200);
+  text-align: left;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
 /* 반응형 */
 
 @media (max-width: 728px) {
+  main {
+    width: 100%;
+    max-width: none;
+    margin: 0 0 40px 0;
+    padding: 0 24px;
+  }
+
   .pricing-card-wrapper {
     flex-direction: column;
     align-items: center;
@@ -322,5 +359,20 @@ hr {
 
   .pricing-card, .plan-toggle {
     width: 100%;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .toggle-text {
+    display: block;
+  }
+}
+
+@media (max-width: 553px) {
+  .pricing-h1-wrapper {
+    margin: 0;
   }
 }
