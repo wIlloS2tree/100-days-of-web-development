@@ -1,0 +1,118 @@
+body {
+  /* background-color: rgb(220, 239, 254); */
+  background-image: url(/02-challenge/DALL·E\ 2025-04-25\ 21.35.22\ -\ A\ single\ 8-bit\ pixel\ art\ tomato\ centered\ on\ a\ solid\ pastel\ blue\ background\ \(rgb\(220\,\ 239\,\ 254\)\).\ The\ tomato\ is\ simple\,\ red\,\ and\ minimalistic\ with\ a\ gr.webp);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  font-family: "Raleway", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem;
+  color: rgb(0, 0, 0);
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-family: "Special Gothic Expanded One", sans-serif;
+}
+
+.form-container {
+  display: block;
+  width: 40rem;
+  margin: 3rem auto;
+  background-color: rgb(240, 243, 244);
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+section {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+label {
+  color: rgb(55, 55, 70);
+  display: block;
+  font-weight: bold;
+  margin: 0.5rem 0 0.3rem 0;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid rgb(154, 157, 161);
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(217, 236, 252);
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: rgb(193, 193, 193);
+}
+
+button {
+  font: inherit;
+  border: 1px solid rgb(36, 62, 95);
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#form-action {
+  text-align: right;
+}
+
+.button-filled {
+  background-color: rgb(36, 62, 95);
+  color: white;
+}
+
+.button-empty {
+  background-color: transparent;
+  color: rgb(36, 62, 95);
+}
+
+.button-filled:hover {
+  background-color: rgb(49, 86, 134);
+}
+
+.button-empty:hover {
+  background-color: rgb(202, 215, 233);
+}
+
+.inline-control {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.inline-control label {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.inline-control input {
+  width: auto;
+}
