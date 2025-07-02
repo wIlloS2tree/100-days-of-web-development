@@ -52,7 +52,7 @@ document.querySelectorAll();
 // 1. Select the <h1> element by "drilling into the DOM" and 
 //    save it in a variable with a name of your choice
 document.body.firstElementChild;
-let h1Element = document.body.firstElementChild;
+// let h1Element = document.body.firstElementChild; 
 
 
 // 2. Use the variable from (1) and get access to the "parent"
